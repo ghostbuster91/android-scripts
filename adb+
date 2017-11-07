@@ -16,6 +16,6 @@ do
     then
         device=`echo $line | awk '{print $1}'`
         echo "$device $@ ..."
-        adb -s $device $@
+        adb -s $device $@ &
     fi
 done
